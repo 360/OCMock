@@ -1,0 +1,3 @@
+# Files in the project
+Source/OCMock.xcodeproj/*.pbxproj -crlf -diff -merge
+
