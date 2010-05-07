@@ -1,0 +1,9 @@
+# Files in all folders ...
+.DS_Store
+
+# Build folders ...
+Source/build
+
+# Files in the projects
+Source/OCMock.xcodeproj/*.mode1v3
+Source/OCMock.xcodeproj/*.pbxuser
