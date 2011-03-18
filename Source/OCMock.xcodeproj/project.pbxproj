@@ -104,7 +104,7 @@
 		508C28961190430900E392B9 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 03DE221606DB97DA00E5A2A8 /* License.txt */; };
 		508C28971190430E00E392B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE218F06DB91CF00E5A2A8 /* Foundation.framework */; };
 		8DC2EF510486A6940098B216 /* OCMock_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF5E0370ADEE00C91783 /* OCMock_Prefix.pch */; };
-		9F35D3DC0D349E7E00C05E52 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* OCMock.framework */; };
+		9F35D3DC0D349E7E00C05E52 /* OCMock in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* OCMock */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,7 +181,7 @@
 		32DBCF5E0370ADEE00C91783 /* OCMock_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock_Prefix.pch; sourceTree = "<group>"; };
 		508C285F119042C300E392B9 /* libOCMock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOCMock.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = Info.plist; sourceTree = "<group>"; };
-		8DC2EF5B0486A6940098B216 /* OCMock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCMock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC2EF5B0486A6940098B216 /* OCMock */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.framework; path = OCMock; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +191,7 @@
 			files = (
 				03BF2D4008F1C6BA00978C59 /* SenTestingKit.framework in Frameworks */,
 				03BF2D4108F1C6BC00978C59 /* Foundation.framework in Frameworks */,
-				9F35D3DC0D349E7E00C05E52 /* OCMock.framework in Frameworks */,
+				9F35D3DC0D349E7E00C05E52 /* OCMock in Frameworks */,
 				032797870E09F40E006CA665 /* OCHamcrest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +218,7 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DC2EF5B0486A6940098B216 /* OCMock.framework */,
+				8DC2EF5B0486A6940098B216 /* OCMock */,
 				03BF2D3708F1C69500978C59 /* OCMockTests.octest */,
 				508C285F119042C300E392B9 /* libOCMock.a */,
 			);
@@ -525,7 +525,7 @@
 			name = OCMock;
 			productInstallPath = "$(HOME)/Library/Frameworks";
 			productName = OCMock;
-			productReference = 8DC2EF5B0486A6940098B216 /* OCMock.framework */;
+			productReference = 8DC2EF5B0486A6940098B216 /* OCMock */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -535,7 +535,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 03DFEE1208F04987002E8661 /* Build configuration list for PBXProject "OCMock" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* OCMock */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -714,6 +718,7 @@
 				OTHER_REZFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = OCMockTests;
+				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -746,6 +751,7 @@
 				OTHER_REZFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = OCMockTests;
+				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -785,6 +791,7 @@
 				OTHER_CFLAGS = "-fobjc-exceptions";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = OCMock;
+				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				TEST_AFTER_BUILD = YES;
 				WARNING_CFLAGS = (
@@ -823,6 +830,7 @@
 				OTHER_CFLAGS = "-fobjc-exceptions";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = OCMock;
+				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				TEST_AFTER_BUILD = YES;
 				WARNING_CFLAGS = (
@@ -879,6 +887,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PREBINDING = NO;
 				PRODUCT_NAME = OCMock;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -891,6 +900,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PREBINDING = NO;
 				PRODUCT_NAME = OCMock;
+				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
 			};
 			name = Release;
