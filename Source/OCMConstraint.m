@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------------------
-//  $Id$
+//  $Id: OCMConstraint.m 57 2010-07-19 06:14:27Z erik $
 //  Copyright (c) 2007-2010 by Mulle Kybernetik. See License file for details.
 //---------------------------------------------------------------------------------------
 
@@ -91,7 +91,7 @@
 
 - (BOOL)evaluate:(id)value
 {
-	return ![value isEqualTo:testValue];
+	return ![value isEqual:testValue];
 }
 
 @end
@@ -115,7 +115,7 @@
 
 #pragma mark  -
 
-#ifdef MAC_OS_X_VERSION_10_6
+#if NS_BLOCKS_AVAILABLE
 
 @implementation OCMBlockConstraint
 

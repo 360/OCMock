@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------------------
-//  $Id$
+//  $Id: OCMArg.m 77 2011-03-17 21:33:59Z erik $
 //  Copyright (c) 2009-2010 by Mulle Kybernetik. See License file for details.
 //---------------------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@
 	return [OCMConstraint constraintWithSelector:selector onObject:anObject];
 }
 
-#ifdef MAC_OS_X_VERSION_10_6
+#if NS_BLOCKS_AVAILABLE
 
 + (id)checkWithBlock:(BOOL (^)(id))block 
 {
@@ -51,9 +51,9 @@
 
 #endif
 
-+ (id *)setTo:(id)value;
++ (id *)setTo:(id)value
 {
-	return (id *)[[OCMPassByRefSetter alloc] initWithValue:value];
+	return (id *)[[[OCMPassByRefSetter alloc] initWithValue:value] autorelease];
 }
 
 + (id)resolveSpecialValues:(NSValue *)value

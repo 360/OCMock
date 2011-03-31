@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------------------
-//  $Id$
+//  $Id: OCMockRecorder.h 68 2010-08-20 13:20:52Z erik $
 //  Copyright (c) 2004-2010 by Mulle Kybernetik. See License file for details.
 //---------------------------------------------------------------------------------------
 
@@ -22,9 +22,10 @@
 - (id)andThrow:(NSException *)anException;
 - (id)andPost:(NSNotification *)aNotification;
 - (id)andCall:(SEL)selector onObject:(id)anObject;
-#ifdef MAC_OS_X_VERSION_10_6
+#if NS_BLOCKS_AVAILABLE
 - (id)andDo:(void (^)(NSInvocation *))block; 
 #endif
+- (id)andForwardToRealObject;
 
 - (NSArray *)invocationHandlers;
 

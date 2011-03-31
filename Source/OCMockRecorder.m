@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------------------
-//  $Id$
+//  $Id: OCMockRecorder.m 68 2010-08-20 13:20:52Z erik $
 //  Copyright (c) 2004-2010 by Mulle Kybernetik. See License file for details.
 //---------------------------------------------------------------------------------------
 
@@ -85,7 +85,7 @@
 	return self;
 }
 
-#ifdef MAC_OS_X_VERSION_10_6
+#if NS_BLOCKS_AVAILABLE
 
 - (id)andDo:(void (^)(NSInvocation *))aBlock 
 {
@@ -94,6 +94,13 @@
 }
 
 #endif
+
+- (id)andForwardToRealObject
+{
+	[NSException raise:NSInternalInconsistencyException format:@"Method %@ can only be used with partial mocks.",
+	 NSStringFromSelector(_cmd)];
+	return self; // keep compiler happy
+}
 
 
 - (NSArray *)invocationHandlers
